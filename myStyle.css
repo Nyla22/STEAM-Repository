@@ -1,0 +1,55 @@
+/* Header Styling */
+h1 {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px; 
+}
+
+/* Navigation Bar Styling */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(94, 111, 141);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(69, 82, 104);
+}
+
+.active {
+  background-color: #1abc9c;
+}
+
+
+/* Old Header Code
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inLine;
+}
+  
+a {
+  padding: 8px;
+  background-color: #dddddd;
+}
+*/

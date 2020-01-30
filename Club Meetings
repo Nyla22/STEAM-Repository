@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+  <head>
+    <link rel="stylesheet" type="text/css" href="myStyle.css"/>
+    <title>Charity Tracker</title>
+  </head>
+  <body>
+    
+    <!--Header and Navigation Bar Code-->
+    <h1><center>Charity Tracker</center></h1>
+    <ul>
+      <li><a class="active" href="index.html">Club List</a></li>
+      <li><a href="clubMeetings.html">Club Meetings</a></li>
+      <li><a href="aboutUs.html">About Us</a></li>
+    </ul>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+    <h2><center>Club Meetings</center></h2>
 
-</body>
+  
+
+  </body>
 </html>

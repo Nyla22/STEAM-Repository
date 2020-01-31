@@ -7,7 +7,10 @@ h1 {
   font-size: 30px;
   font-family: Bookman, verdana, serif;
 }
-
+/* body font */
+body{
+  font-family: Courier, Bookman, serif;
+}
 /* Navigation Bar Styling */
 ul {
   list-style-type: none;

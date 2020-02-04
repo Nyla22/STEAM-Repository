@@ -1,26 +1,25 @@
 /* Header Styling */
 h1 {
-  padding: 60px;
-  text-align: center;
+  padding: 100px;
+  /* width: 100%; */
   background: #1abc9c;
-  color: white;
-  font-size: 30px;
-  font-family: Bookman, verdana, serif;
-  /* font-family: Courier, Bookman, serif; */
-}
+  margin: 0px;
 
-/* body font */
-body{
-  font-family: Courier, Bookman, serif;
+  text-align: center;
+  color: #ffffff;
+  font-size: 60px;
+  /* font-family: Bookman, verdana, serif; */
+  font-family: Courier, Bookman, serif; 
+  
 }
 
 /* Navigation Bar Styling */
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
   overflow: hidden;
   background-color: rgb(94, 111, 141);
+  padding: 0;
 }
 
 li {
@@ -42,6 +41,14 @@ li a:hover:not(.active) {
 .active {
   background-color: #1abc9c;
 }
+
+
+/* Body S */
+body{
+  font-family: Courier, Bookman, serif;
+  margin: 0;
+}
+
 
 
 /* Old Header Code

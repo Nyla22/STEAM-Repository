@@ -9,7 +9,8 @@ signupForm.addEventListener('submit',(e) => {
 
     //sign up user
     auth.createUserWithEmailAndPassword(email,password).then(cred => {
-        console.log(cred.user)
+        console.log(cred.user);
+        signupForm.reset();
 
     })
 })
@@ -23,9 +24,10 @@ loginForm.addEventListener('submit',(e) => {
     const email = loginForm['login-email'].value;
     const password = loginForm['login-password'].value;
 
-    //sign up user
+    //login user
     auth.signInWithEmailAndPassword(email,password).then(cred => {
-        console.log(cred.user)
+        console.log(cred.user);
+        loginForm.reset();
 
     })
 })
@@ -35,8 +37,16 @@ const logout = document.querySelector('#signout');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
     auth.signOut().then(() => {
-        console.log('User signed out.')
+        console.log('User signed out.');
     })
 
+})
+
+
+//Track Acount Status
+auth.onAuthStateChanged(user => {
+    if (user) {
+        console.log
+    }
 })
 

@@ -1,3 +1,18 @@
+//Get Data
+db.collection('info').get().then(snapshot => {
+    setupInfo(snapshot.docs);
+});
+
+
+//Track Acount Status
+auth.onAuthStateChanged(user => {
+    if (user) {
+        console.log('User logged in: ', user);
+    } else {
+        console.log('User logged out.');
+    }
+});
+
 //Create Acount Code
 const signupForm = document.querySelector('#signup-form');
 signupForm.addEventListener('submit',(e) => {
@@ -40,13 +55,5 @@ logout.addEventListener('click', (e) => {
         console.log('User signed out.');
     })
 
-})
-
-
-//Track Acount Status
-auth.onAuthStateChanged(user => {
-    if (user) {
-        console.log
-    }
 })
 

@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="myStyle.css"/>
+    <!-- Required Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!--Importing Bootstrap and Custom CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="myStyle.css"/> -->
     <title>Club List</title>
   </head>
-  <body>
 
+  <body>
     <!--Header and Navigation Bar Code-->
-    <h1><center>LAHS Clubs</center></h1>
-    <ul>
-      <li><a href="index.html">Club List</a></li>
-      <li><a href="clubMeetings.html">Club Meetings</a></li>
-      <li><a href="aboutUs.html">About Us</a></li>
-      <li><a class="active" href="myPage.html">My Page</a></li>
-      
-    </ul>
-    <h2><center>My Page</center></h2>
+    <div class="jumbotron" class="page-header">
+      <h1><center>LAHS Clubs</center></h1>
+    </div>
+
+    <nav class="navbar navbar-expand-md navbar-light">
+      <ul class="navbar-nav">
+        <li class="nav-item" ><a class="nav-link" href="index.html">Club List</a></li>
+        <li class="nav-item"><a class="nav-link" href="clubMeetings.html">Club Meetings</a></li>
+        <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
+        <li class="nav-item active"><a class="nav-link" href="myPage.html">My Page</a></li>
+      </ul>
+    </nav>
 
     <!--Create Acount, Login and Sign Out Buttons-->
-
     <form id="signup-form">
       <input type ="email" id="signup-email" required />
       <input type="password" id="signup-password" required />
@@ -31,18 +39,24 @@
       <button type="submit">Login</button>
     </form>
 
-    
-  
-
     <button id="signout">Sign Out</button>
 
 
+    <!--Edit Your Page Form-->
+    <form class="logged-in" id="create-form">
+      <div class="form-group">
+        <label for="clubName">Your Club's Name</label>
+        <input class="form-control" id="clubName">
+      </div>
+      <div class="form-group"></div>
+        <label for="clubContent">About Your Club</label>
+        <input class="form-control" id="clubContent">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>    
+
 
     
-
-
-    
-    <!--Firebase User Authentication Code-->
+    <!--Firebase Setup Code-->
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>    
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>

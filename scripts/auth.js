@@ -1,3 +1,8 @@
+//Get Data for Showing Club Lists
+db.collection('info').get().then(snapshot => {
+    setupInfo(snapshot.docs); 
+}); 
+
 //Backend Code for Edit Your Page Form ie. create and hopefully edit guides
 const createForm = document.querySelector('#create-form');
 createForm.addEventListener('submit', (e) => {
@@ -10,12 +15,6 @@ createForm.addEventListener('submit', (e) => {
         console.log('It worked')
     }) 
 })
-
-//Get Data for Showing Club Lists
-/*
-db.collection('info').get().then(snapshot => {
-    setupInfo(snapshot.docs);
-}); */
 
 //Track Acount Status
 auth.onAuthStateChanged(user => {

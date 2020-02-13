@@ -9,6 +9,7 @@ const setupUI = (user) => {
 }
 
 //Show Club Lists
+
 const infoList = document.querySelector('.info');
 const setupInfo = (data) => {
 

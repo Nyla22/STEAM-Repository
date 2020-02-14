@@ -1,19 +1,109 @@
 /* Header Styling */
+.jumbotron {
+  margin-bottom: 0px;
+  padding: 4%;
+}
+
+.headertext {
+  font-size: 50px;
+  padding: 0px;
+  margin: 0px;
+  width: 300px;
+  border-style: solid;
+  border-width: 5px;
+  text-align: center;
+  
+}
+
+/* Navbar Styling */
+nav .navbar .navbar-light .bg-light {
+  margin-bottom: 500px;
+}
+
+/* parent navbar-nav, child li*/
+.navbar-nav > li {
+  float: left;
+  position: relative;
+  font-size: 18px;
+  color: black;
+  padding: 0px;
+  margin: 0px;
+}
+
+.navbar-light .navbar-nav {
+  color: black;
+}
+
+/* navbar-light and navbar-nav and active and element a, insert something after */
+.navbar-light .navbar-nav .active a::after {
+  border-bottom: 5px solid red;
+  padding: 0px;
+  margin: 0px;
+  bottom: -0px;
+  content: " ";
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+/* navbar-light and navbar-nav and hovering on element a, insert something after */
+.navbar-light .navbar-nav a:hover::after {
+  border-bottom: 5px solid red;
+  padding: 0px;
+  margin: 0px;
+  bottom: -0px;
+  content: " ";
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0,0,0);
+}
+
+/* classes nav-bar light and nav-bar nav and active, the link place content after
+
+}
+*/
+
+/*
+
+border-bottom: 5px solid yellow;
+  bottom: -10px;
+.navbar-nav > li {
+  float: left;
+  position: relative;
+}
+.navbar-light .navbar-nav .active a::after {
+  border-bottom: 5px solid #5bc0eb;
+  bottom: -10px;
+  content: " ";
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+*/
+
+
+/* 
+Header Styling 
 h1 {
   padding: 100px;
-  /* width: 100%; */
+  width: 100%;
   background: #1abc9c;
   margin: 0px;
 
   text-align: center;
   color: #ffffff;
   font-size: 80px;
-  /* font-family: Bookman, verdana, serif; */
+  font-family: Bookman, verdana, serif; 
   font-family: Courier, Bookman, serif; 
   
 }
 
-/* Navigation Bar Styling */
+Navigation Bar Styling 
 ul {
   list-style-type: none;
   margin: 0px;
@@ -42,8 +132,8 @@ li a:hover:not(.active) {
   background-color: #1abc9c;
 }
 
+/
 
-/* Body S */
 body {
   font-family: Courier, Bookman, serif;
   margin: 0;
@@ -51,7 +141,7 @@ body {
 
 
 
-/* Old Header Code
+Old Header Code
 ul {
   list-style-type: none;
   margin: 0;

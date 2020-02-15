@@ -28,6 +28,7 @@ auth.onAuthStateChanged(user => {
 });
 
 //AUTHENTICATION SETUP CODE
+/*
 //Create Acount Code
 const signupForm = document.querySelector('#signup-form');
 signupForm.addEventListener('submit',(e) => {
@@ -43,11 +44,12 @@ signupForm.addEventListener('submit',(e) => {
         signupForm.reset();
 
     })
-})
+}) */
 
 //Login Form
 const loginForm = document.querySelector('#login-form');
 loginForm.addEventListener('submit',(e) => {
+    console.log('Button pressed!')
     e.preventDefault();
 
     //get user info
@@ -62,13 +64,12 @@ loginForm.addEventListener('submit',(e) => {
     })
 })
 
+
 //Sign Out Code
 const logout = document.querySelector('#signout');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
-    auth.signOut().then(() => {
-        console.log('User signed out.');
-    })
+    auth.signOut();
 
-})
+}) 
 

@@ -20,29 +20,43 @@
     <nav class="navbar navbar-expand-md navbar-light bg-light">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" ><a class="nav-link" href="index.html">Club List</a></li>
-        <li class="nav-item"><a class="nav-link" href="clubMeetings.html">Calendar</a></li>
+        <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
         <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
-        <li class="nav-item active"><a class="nav-link" href="myPage.html">Login</a></li>
+        <li class="nav-item active logged-out"><a class="nav-link" href="myPage.html">Login</a></li>
+        <li class="nav-item active logged-in"><a class="nav-link" href="myPage.html">Edit</a></li>
+        <li class="nav-item logged-in" id="signout"><a class="nav-link" href="myPage.html">Logout</a></li>
       </ul>
     </nav>
 
     <!--Create Acount, Login and Sign Out Buttons-->
+    <!--
     <form id="signup-form">
       <input type ="email" id="signup-email" required />
       <input type="password" id="signup-password" required />
       <button type="submit">Create Acount</button>
     </form>
+    -->
 
-    <form id="login-form">
-      <input type ="email" id="login-email" required />
-      <input type="password" id="login-password" required />
+
+    <form class="logged-out" id="login-form">
+      <div class="form-group"> 
+        <label for="email">Email Address:</label>
+        <input type ="email" class="form-control" id="login-email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="login-password" required />
+      </div>
       <button type="submit">Login</button>
     </form>
 
-    <button id="signout">Sign Out</button>
+
+
+    <!--<button id="signout">Sign Out</button>-->
 
 
     <!--Edit Your Page Form-->
+
     <form class="logged-in" id="create-form">
       <div class="form-group">
         <label for="clubName">Your Club's Name</label>

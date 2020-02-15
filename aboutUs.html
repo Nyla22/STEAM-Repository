@@ -14,16 +14,46 @@
     <nav class="navbar navbar-expand-md navbar-light bg-light">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" ><a class="nav-link" href="index.html">Club List</a></li>
-        <li class="nav-item"><a class="nav-link" href="clubMeetings.html">Calendar</a></li>
+        <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
         <li class="nav-item active"><a class="nav-link" href="aboutUs.html">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="myPage.html">Login</a></li>
       </ul>
     </nav>
 
+    <!--
+    <p class="logged-in">Testing</p>
      <p><left>This website was created by students in the STEAM class in order to help clubs raise awarness about their clubs, get more people to join clubs, and motivate and collect donations from others. </left></p>
 
+     Firebase Setup Code
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
 
-  
+    <script>
+      //Connecting Front-End(This Code) to Back-End(Firebase Console)
+      var firebaseConfig = {
+        apiKey: "AIzaSyDV6JmF3kn9DnlMAs0M4KEdiimOI7NSchk",
+        authDomain: "charity-tracker-2cbb1.firebaseapp.com",
+        databaseURL: "https://charity-tracker-2cbb1.firebaseio.com",
+        projectId: "charity-tracker-2cbb1",
+        storageBucket: "charity-tracker-2cbb1.appspot.com",
+        messagingSenderId: "593519301389",
+        appId: "1:593519301389:web:2acb6d11eb9f56b82e1644",
+        measurementId: "G-9NDMF0F80R"
+      };
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      //db.settings({ timestampsInSnapshots: true })
+      
+    </script>
+    
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/aboutUs.js"></script>
+    -->
 
   </body>
 </html>

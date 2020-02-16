@@ -18,12 +18,11 @@ createForm.addEventListener('submit', (e) => {
 
 //Track Acount Status
 auth.onAuthStateChanged(user => {
+    setupUI(user);
     if (user) {
         console.log('User logged in: ', user);
-        setupUI(user);
     } else {
         console.log('User logged out.');
-        setupUI(user);
     }
 });
 

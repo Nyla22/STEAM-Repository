@@ -1,9 +1,4 @@
-//Get Data for Showing Club Lists
-db.collection('info').get().then(snapshot => {
-    setupInfo(snapshot.docs); 
-}); 
-
-//Backend Code for Edit Your Page Form ie. create and hopefully edit guides
+//Edit Club Info Forum
 const createForm = document.querySelector('#create-form');
 createForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -15,16 +10,6 @@ createForm.addEventListener('submit', (e) => {
         console.log('It worked')
     }) 
 })
-
-//Track Acount Status
-auth.onAuthStateChanged(user => {
-    setupUI(user);
-    if (user) {
-        console.log('User logged in: ', user);
-    } else {
-        console.log('User logged out.');
-    }
-});
 
 //AUTHENTICATION SETUP CODE
 /*
@@ -64,11 +49,12 @@ loginForm.addEventListener('submit',(e) => {
 })
 
 
-//Sign Out Code
+//Sign Out Code (Moved to universal.js)
+/*
 const logout = document.querySelector('#signout');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
     auth.signOut();
 
-}) 
+}) */
 

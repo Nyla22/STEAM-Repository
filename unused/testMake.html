@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <title>Make New Doc</title>
+</head>
+
+<body>
+    <form id='createForm'>
+        <div>
+          <label for="docName">Enter Doc Name:</label>
+          <input id="docName">
+        </div>
+        <div>
+          <label for="content">Enter Doc Content:</label>
+          <input id="content">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p href=''>Click this link to see the document.</p>
+
+
+
+
+    <!--
+    <button id ='myButton'>Click Me</button>
+    <iframe id='theFrame'></iframe>-->
+
+    <script>
+        const createForm = document.querySelector('#createForm');
+        createForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const docName = createForm.docName.value;
+            const content = createForm.content.value;
+
+            var doc = document.implementation.createHTMLDocument(docName);
+            var p = doc.createElement('p');
+            p.innerHTML = content;
+            console.log('Document created');
+
+        }) 
+
+        /*
+
+            myFrame.document.innerHTML = doc;
+
+        };*/
+
+    </script>
+
+</body>

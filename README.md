@@ -2,8 +2,11 @@
 Stuff To Add
 - put club code on a seperate page
 - reinstall sign-up code
-- allow user to edit content
++ allow user to edit content
 + make header wosrk on all pages
+- sign-up to a club feature
+- report a bug feature
+- fix margins and styling
 
 
 List of Errors

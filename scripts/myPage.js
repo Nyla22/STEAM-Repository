@@ -2,14 +2,16 @@
 const createForm = document.querySelector('#create-form');
 createForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
-    db.collection('info').add({
+    var user = firebase.auth().currentUser;
+
+    db.collection('info').doc(user.uid).set({
         club: createForm['clubName'].value,
         content: createForm['clubContent'].value
-    }).then(() => {
-        console.log('It worked')
-    }) 
-})
+    });
+    createForm.reset();
+
+    
+});
 
 //AUTHENTICATION SETUP CODE
 /*

@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <!--Header and Navigation Bar Code-->
+    <!--HEADER AND NAV BAR-->
     <div class="jumbotron" class="page-header">
       <center><h1 class="headertext">Club Hub</h1></center>
     </div>
@@ -28,7 +28,7 @@
         <li class="nav-item" ><a class="nav-link" href="index.html">Club List</a></li>
         <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
         <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
-        <li class="nav-item active logged-out"><a class="nav-link" href="myPage.html">Login</a></li>
+        <li class="nav-item active logged-out"><a class="nav-link" href="myPage.html">Officers</a></li>
         <li class="nav-item active logged-in"><a class="nav-link" href="myPage.html">Edit</a></li>
         <li class="nav-item logged-in" id="signout"><a class="nav-link" href="myPage.html">Logout</a></li>
       </ul>
@@ -43,6 +43,11 @@
     </form>
     -->
 
+    <!--NOT HEADER AND NAV BAR-->
+    <div class='actualContent'>
+
+    <!--Login Form-->
+    <h3>Officer Login</h3>
     <form class="logged-out" id="login-form">
       <div class="form-group"> 
         <label for="email">Email Address:</label>
@@ -55,13 +60,13 @@
       <button type="button submit">Login</button>
     </form>
 
+    <!--Register Your Club-->
+    <h3>Register Your Club</h3>
+    <p>Registering your club allows you to have a page on club list and post meetings/events on the club calender. You must follow our <span>community guidelines</span>.</p>
 
-
-    <!--<button id="signout">Sign Out</button>-->
-
+    
 
     <!--Edit Your Page Form-->
-
     <form class="logged-in" id="create-form">
       <div class="form-group">
         <label for="clubName">Your Club's Name</label>
@@ -73,6 +78,8 @@
       </div>
       <button type="button submit" class="btn btn-primary">Submit</button>
     </form>    
+
+    </div>
 
 
     

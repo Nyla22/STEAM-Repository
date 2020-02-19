@@ -1,5 +1,8 @@
+
 //Code For Showing Club Index 
-const setupInfo = (data) => {
+function setupInfo() {
+    data = db.collection('info').get().then(snapshot);
+
     let html = ''; 
     const clubIndex = document.querySelector('.clubIndex'); //Using querySelectorAll doesn't work for some reason...
     data.forEach(doc => {
@@ -17,46 +20,61 @@ const setupInfo = (data) => {
 }; 
 
 //When Club Name Is Clicked, Show Club 'Page'
-function setUpClickHandlers(data) {
-    //Taking Listed Elements and Making Them Clickable
+function setUpClickHandlers() {
     const clubNames = document.getElementsByClassName('clubName'); //Can't use querySelectorAll because it isn't live    const clubPage = document.querySelector('clubPage');
+    
+
+
+    /* we need to know which club they clicked on
+    data.where(club = what they clicked on)
     for (club of clubNames) {
-        club.onclick = (e) => { 
-            //Cycles Through Data and Get's Data of Club Clicked
-            // db.collection('info') => snapshot.docs => data => for each doc => get data => see if club == clicked club's innerHTML
-            data.forEach(doc => {
-                myInfo = doc.data();
-                if (myInfo.club == club.innerHTML) {
-                    currentClub = myInfo;
-                };
-            });
-
-            //Hides Club Index And Displays Current Club's Info
-            const clubIndex = document.querySelector('.clubIndex');
-            clubIndex.style.display = 'none';
-
-            const clubPage = document.querySelector('.clubPage');
+        club.onclick = (e) => { //function club.onclick equals to the parameter e, and tjkjin
+            //alert(window.location.href);
+            
+            
             let html = `
-                <h2>${currentClub.club}</h2>
-                <p>${currentClub.content}</p>
-                
+                <h2>${myInfo.club}</h2>
+                <p>${myInfo.content}</p>
             `;
             clubPage.innerHTML = html;
 
-        };
-    }; 
 
+
+        };
+    };*/
 };
 
+//If club name clicked, show club content and back button
 
 //Get Data and Execute Code (when DOM has loaded)
+
 document.addEventListener('DOMContentLoaded', (e) => {
-    db.collection('info').get().then(snapshot => {
+    //Get Club List Data
+    //Show Club Lists
+    setupInfo();
+    /*db.collection('info').get().then(snapshot => {
         setupInfo(snapshot.docs);
 
-    }); 
+    }); */
 });
 
 
 
 
+/*
+This later part was loaded before the firs part was loaded, that's why HTML collection showed length of 0
+
+
+list element, on click, 
+make inner html
+myInfo.club <h1>
+<p> {myInfo.content}
+
+back. on cilck
+
+Bug Advice
+- console.log it
+- watch out for load time
+- watch out for query selectors
+- watch out for indice erros
+*/

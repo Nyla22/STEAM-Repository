@@ -62,98 +62,19 @@ nav .navbar .navbar-light .bg-light {
   color: rgba(0,0,0);
 }
 
-/* classes nav-bar light and nav-bar nav and active, the link place content after
 
-}
-*/
-
-/*
-
-border-bottom: 5px solid yellow;
-  bottom: -10px;
-.navbar-nav > li {
-  float: left;
-  position: relative;
-}
-.navbar-light .navbar-nav .active a::after {
-  border-bottom: 5px solid #5bc0eb;
-  bottom: -10px;
-  content: " ";
-  left: 0;
-  position: absolute;
-  right: 0;
+/* Actual Content Styling */
+.actualContent {
+  margin: 20px;
 }
 
-*/
-
-
-/* 
-Header Styling 
-h1 {
-  padding: 100px;
-  width: 100%;
-  background: #1abc9c;
-  margin: 0px;
-
-  text-align: center;
-  color: #ffffff;
-  font-size: 80px;
-  font-family: Bookman, verdana, serif; 
-  font-family: Courier, Bookman, serif; 
-  
-}
-
-Navigation Bar Styling 
-ul {
-  list-style-type: none;
-  margin: 0px;
-  overflow: hidden;
-  background-color: rgb(94, 111, 141);
-  padding: 0;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: rgb(69, 82, 104);
-}
-
-.active {
-  background-color: #1abc9c;
-}
-
-/
-
-body {
-  font-family: Courier, Bookman, serif;
-  margin: 0;
+.logged-out {
+  margin-bottom: 30px;
 }
 
 
 
-Old Header Code
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
 
-li {
-  display: inLine;
-}
-  
-a {
-  padding: 8px;
-  background-color: #dddddd;
-}
-*/
+
+
+

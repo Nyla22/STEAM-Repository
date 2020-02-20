@@ -77,8 +77,7 @@ span {
   text-decoration: underline;
 }
 
-
-
-
-
-
+.clubIndex {
+  font-size: 20px;
+  margin-top: 25px;
+}

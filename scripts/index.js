@@ -7,7 +7,7 @@ const setupInfo = (data) => {
         const myInfo = doc.data();
         const newLi = `
             <li> 
-                <div class='clubName'>${myInfo.club}</div>
+                <div class="clubName">${myInfo.club}</div>
             </li>
             `;
         html += newLi; 
@@ -19,13 +19,15 @@ const setupInfo = (data) => {
 //When Club Name Is Clicked, Show Club 'Page'
 function setUpClickHandlers(data) {
     //Taking Listed Elements and Making Them Clickable
-    const clubNames = document.getElementsByClassName('clubName'); //Can't use querySelectorAll because it isn't live    const clubPage = document.querySelector('clubPage');
+    const clubNames = document.getElementsByClassName('clubName'); //Can't use querySelectorAll because it isn't live    
     for (club of clubNames) {
         club.onclick = (e) => { 
             //Cycles Through Data and Get's Data of Club Clicked
-            // db.collection('info') => snapshot.docs => data => for each doc => get data => see if club == clicked club's innerHTML
+            // db.collection('info') => snapshot.docs => data => for each doc => .data method to extract data of doc => see if club == clicked club's innerHTML
             data.forEach(doc => {
                 myInfo = doc.data();
+                //console.log(myInfo.club);
+                console.log(club.innerHTML);
                 if (myInfo.club == club.innerHTML) {
                     currentClub = myInfo;
                 };
@@ -35,11 +37,16 @@ function setUpClickHandlers(data) {
             const clubIndex = document.querySelector('.clubIndex');
             clubIndex.style.display = 'none';
 
+            const backButton = document.querySelector('#backButton');
+            console.log(backButton);
+            backButton.style.display = 'block'; 
+            console.log(backButton.style.display);
+
             const clubPage = document.querySelector('.clubPage');
             let html = `
+                <button id='backButton'><a href="index.html">Back</a></button>
                 <h2>${currentClub.club}</h2>
                 <p>${currentClub.content}</p>
-                
             `;
             clubPage.innerHTML = html;
 

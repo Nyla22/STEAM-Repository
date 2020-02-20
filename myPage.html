@@ -47,7 +47,7 @@
     <div class='actualContent'>
 
     <!--Login Form-->
-    <h3>Officer Login</h3>
+    <h3 class="logged-out">Officer Login</h3>
     <form class="logged-out" id="login-form">
       <div class="form-group"> 
         <label for="email">Email Address:</label>
@@ -61,12 +61,47 @@
     </form>
 
     <!--Register Your Club-->
-    <h3>Register Your Club</h3>
-    <p>Registering your club allows you to have a page on club list and post meetings/events on the club calender. You must follow our <span>community guidelines</span>.</p>
+    <h3 class="logged-out">Register Your Club</h3>
+    <p class="logged-out">Registering your club allows you to have a page on club list and post meetings/events on the club calender. You must follow our <span data-toggle="modal" data-target="#guidelines">community guidelines</span>.</p>
+    <form class="logged-out" id="signup-form">
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type ="email" class="form-control" id="signup-email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password: </label>
+        <input type="password" class="form-control" id="signup-password" required />
+      </div>
+      <button type="submit">Create Acount</button>
+    </form>
+
+    <!--Communtiy Guidelines Modal-->
+    <div class="modal" id="guidelines">
+      <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <!--Modal Header with Close Button-->
+        <div class="modal-header">
+          <h3 class="modal-title">Community Guidelines</h3>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!--Modal Body-->
+        <div class="modal-body">
+          Stuff about not trashing the site, etc...
+        </div>
+
+      </div>
+      </div>
+    </div>
 
     
 
+
+
+
     <!--Edit Your Page Form-->
+    <h3 class="logged-in">Edit Your Club's Page</h3>
     <form class="logged-in" id="create-form">
       <div class="form-group">
         <label for="clubName">Your Club's Name</label>
@@ -112,8 +147,14 @@
       
     </script>
 
+    <!--Actual JavaScript Code (To Make Forms Work, etc...)-->
     <script src="scripts/universal.js"></script>
     <script src="scripts/myPage.js"></script>
+
+    <!--Bootstrap and jQuery Javascript CDN (for the Modal)-->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+   
   
   </body>
 </html>

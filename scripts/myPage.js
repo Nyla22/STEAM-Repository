@@ -1,4 +1,4 @@
-//Edit Club Info Forum
+//Edit Club Info Form
 const createForm = document.querySelector('#create-form');
 createForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -14,8 +14,7 @@ createForm.addEventListener('submit', (e) => {
 });
 
 //AUTHENTICATION SETUP CODE
-/*
-//Create Acount Code
+//Register Your Club Code
 const signupForm = document.querySelector('#signup-form');
 signupForm.addEventListener('submit',(e) => {
     e.preventDefault();
@@ -30,7 +29,7 @@ signupForm.addEventListener('submit',(e) => {
         signupForm.reset();
 
     })
-}) */
+}) 
 
 //Login Form
 const loginForm = document.querySelector('#login-form');
@@ -50,13 +49,4 @@ loginForm.addEventListener('submit',(e) => {
     })
 })
 
-
-//Sign Out Code (Moved to universal.js)
-/*
-const logout = document.querySelector('#signout');
-logout.addEventListener('click', (e) => {
-    e.preventDefault();
-    auth.signOut();
-
-}) */
-
+//Community Guidelines

@@ -68,10 +68,14 @@ nav .navbar .navbar-light .bg-light {
   margin: 20px;
 }
 
-.logged-out {
+#login-form {
   margin-bottom: 30px;
 }
 
+span {
+  color: blue;
+  text-decoration: underline;
+}
 
 
 

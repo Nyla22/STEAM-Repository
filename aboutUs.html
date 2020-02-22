@@ -8,6 +8,8 @@
     <!--Importing Bootstrap and Custom CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="myStyle.css"/> 
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    
     <title>About Us</title>
 
     <!--Fixes So The Blink Is Less Noticable... Better Way?-->
@@ -42,26 +44,25 @@
         <li>a place for club officers to advertise their clubs</li>
         <li>a place for students to see what clubs they can join</li>
         <li>a place for club members to see when their meetings are</li>
-        <li>a place for studnets to see what clubs they can donate to</li>
+        <li>a place for students to see what clubs they can donate to</li>
       </ul>
+
+      <h3>How does it work?</h3>
+      <p>Anybody can acess this website and see the list of clubs</p>
 
       <!--Report A Bug/Make A Suggestion-->
       <h3>Report A Bug/Make A Suggestion</h3>
       <form id="contactUs">
         <div class="form-group"> 
           <label for="email">Email Address:</label>
-          <input type ="email" class="form-control" id="login-email" required />
+          <input type ="email" class="form-control" id="contact-email" required />
         </div>
         <div class="form-group">
-          <label for="password">Password:</label>
-          <input type="password" class="form-control" id="login-password" required />
+          <label for="contact-input">Comment:</label>
+          <input class="form-control" id="contact-input" required />
         </div>
-        <button type="button submit">Login</button>
+        <button type="button submit">Contact Us</button>
       </form>
-
-
-
-
 
       <p>If you submit a bug or make a suggesiton, the ClubHub team will do our best to take a look at it.
         However, ClubHub is an open source project. If someone has a feature they'd really like to make happen,
@@ -101,6 +102,7 @@
       
     </script>
     <script src="scripts/universal.js"></script> 
+    <script src="scripts/aboutUs.js"></script>
 
     <!--Bootstrap and jQuery Javascript CDN (for the Modal)-->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>

@@ -1,12 +1,12 @@
-//Show or Hide Edit Your Page Form (based on logged in/out)
-const loggedInStuff = document.querySelectorAll('.logged-in');
-const loggedOutStuff = document.querySelectorAll('.logged-out');
-const setupUI = (user) => {
-    if (user) {
-        loggedInStuff.forEach(item => item.style.display = 'block');
-        loggedOutStuff.forEach(item => item.style.display = 'none');
-    } else {
-        loggedInStuff.forEach(item => item.style.display = 'none');
-        loggedOutStuff.forEach(item => item.style.display = 'block');
-    }
-};
+//Add Data from Form To Firestore
+const form = document.querySelector('#contactUs');
+const email = document.querySelector('#contact-email');
+const input = document.querySelector('#contact-input');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    db.collection('contacts').add({
+        email: email.value,
+        input: input.value
+    });
+});
